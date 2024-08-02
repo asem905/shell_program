@@ -33,3 +33,23 @@ Libraries and Headers Used
 
 -to compile it:    gcc shell.c commands.c commands.h -o shell.out
 -to run it:        ./shell.out
+-example of output:
+        pwd
+        Token[0]: 'pwd'
+        number of tokens:1
+        /home/vboxuser/Desktop/assem/shell
+        Child exited with status 0
+        ls
+        Token[0]: 'ls'
+        number of tokens:1
+         a.out	      commands.h   shell.out     shell.zip
+         commands.c   commands.exec	   shell.c     
+        Child exited with status 0
+        mv shell.c /home/vboxuser/Desktop
+        Token[0]: 'mv'
+        Token[1]: 'shell.c'
+        Token[2]: '/home/vboxuser/Desktop'
+        number of tokens:3
+        Child exited with status 0  
+
+(I have added many debugging lines to be able to notice every thing happens and result)
