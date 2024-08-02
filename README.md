@@ -32,7 +32,12 @@ Libraries and Headers Used
 
 
 -to compile it:    gcc shell.c commands.c commands.h -o shell.out
+
 -to run it:        ./shell.out
+
+
+
+
 -example of output:
         pwd
         Token[0]: 'pwd'
