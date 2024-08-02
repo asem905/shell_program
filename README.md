@@ -1,7 +1,7 @@
 This repository contains a simple shell implementation in C that supports basic command functionalities. It includes implementations for common shell commands and demonstrates how to handle user input, parse commands, and execute them.
 Overview
 
-This project implements a basic shell with support for commands like mypwd, myecho, mycp, mymv, myexit, myrm, myhelp, envir, mycd, and mytype. The shell reads commands from standard input, parses them, and executes them accordingly.
+This project implements a basic shell with support for built_in_commands like mypwd, myecho, mycp, mymv, myexit, myrm, myhelp, envir, mycd, and mytype. The shell reads commands from standard input, parses them, and executes them accordingly also external commands of any shell as ls,pwd,cat,cp,mv,...
 Commands
 
     mypwd: Print the current working directory.
