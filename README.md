@@ -14,7 +14,8 @@ Commands
     envir: Print environment variables.
     mycd <path>: Change the current directory to the specified path.
     mytype <command>: Determine if a command is internal or external.
-
+    myuptime <command>: Uptime command shows how long the system has been running since the last reboot and time now
+    myfree <command>: provides information about memory usage on the system.
 Libraries and Headers Used
 
     unistd.h: Provides access to the POSIX operating system API.
@@ -56,5 +57,51 @@ Libraries and Headers Used
         Token[2]: '/home/vboxuser/Desktop'
         number of tokens:3
         Child exited with status 0  
+        myfree
+        Token[0]: 'myfree' 
+        number of tokens: 1
+                      total        used        free      shared  buff/cache   available
+        Mem:        8122592 	 5570076    2552516        0     3474400      5857600
+        Swap:       2097148        0 	    2097148
+        myuptime
+        Token[0]: 'myuptime' 
+        number of tokens: 1
+        Current time: 2024-08-07 17:29:54
+        Uptime: 0 days, 0 hours, 53 minutes, 26 seconds
+        ls | grep file
+        Token[0]: 'ls' 
+        Token[1]: '|' 
+        Token[2]: 'grep' 
+        Token[3]: 'file' 
+        number of tokens: 4
+        Command1: 'ls'
+        Command2: 'grep file'
+        file.c
+        file.out
 
-(I have added many debugging lines to be able to notice every thing happens and result)
+-also shell supports:
+1-Piping (|)
+    Concept: Pipes are used to pass the output of one command as input to another command.
+    
+How It Works: 
+    When a pipe (|) is detected in the command line, the shell splits the input into two separate commands.
+    These commands are then executed in sequence, with the output of the first command being fed directly into the second command.
+    as :command1 | command2
+
+2-Redirection (<, >, 2>)
+Concept: Redirection changes where the input comes from or where the output goes.
+
+Types of Redirection:
+
+Input Redirection (<): Takes input from a file instead of standard input.
+Output Redirection (>): Sends output to a file instead of standard output.
+Error Redirection (2>): Redirects error messages to a file instead of standard error.
+
+as:
+    command < inputfile
+    command > outputfile
+    command 2> errorfile
+
+
+
+(I have added many debugging lines to be able to notice every thing happens and result as determining each token you have entered and if error happens determine from where )
