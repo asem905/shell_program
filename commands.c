@@ -4,9 +4,9 @@ File: commands.c
 Comment: Contains all function definitions used in shell.c
 */
 
-/-----------------Includes Section--------------/
+/*-----------------Includes Section--------------*/
 #include "commands.h"
-/-----------------static functions concerning ls---------------/
+/*-----------------variables and static functions concerning ls---------------*/
 typedef struct {
     char name[TOKEN_LENGTH];
     time_t time; // Generic time field
