@@ -1,13 +1,13 @@
 #include "commands.h"
 
-int main(int argc, char **argv) {
+int main(int argc, char *argv[]) { 
     char command[100];
     // List of valid commands
-    const char *commands_given[] = {"mypwd", "myecho", "mycp", "mymv","myexit","myrm","myhelp","envir","mycd","mytype","myuptime","myfree","|",NULL};
-    char token[TOKEN_LENGTH][MAX_TOKENS];  // Array to store tokens as strings
+    const char *commands_given[] = {"mypwd", "myecho", "mycp", "mymv","myexit","myrm","myhelp","envir","mycd","mytype","myuptime","myfree","|"," myls",NULL};
+    char token[MAX_TOKENS][TOKEN_LENGTH];  // Array to store tokens as strings
     ssize_t readsize = 0;
     const char *shellmsg = "Here we go!!\n"; // Message to be displayed when shell starts
-    char buff[PATH_MAX];  // Buffer for getcwd
+    char buff[PATH_MAX];  //for getcwd
     char *retval;
     pid_t pid, wpid;
     int status;
@@ -328,6 +328,8 @@ int main(int argc, char **argv) {
             } else if(strcmp(token[0], "myuptime") == 0) {
                 // Handle 'myuptime' command
                 get_uptime_with_time();
+            }else if(strcmp(token[0], "myls") == 0) {
+                ls_command_implementation(i,token);
             } else {
                 // Handle unknown commands
                 execute_command(token, i);
@@ -337,4 +339,3 @@ int main(int argc, char **argv) {
 
     return 0;
 }
-
