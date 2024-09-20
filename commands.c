@@ -1008,8 +1008,10 @@ void ls_command_implementation(int argc, char token[][TOKEN_LENGTH]) {
             	l_check=1;
                 long_format = 1;
                 sorting_required = SORTING_REQUIRED;
-                if(t_time){// this is used as except -t found it is sorted alphabetical sorting
+                if(t_time){
                 	sort_name = NOSORT_BY_NAME;
+                }else if(f_check){
+                	sorting_required = NOSORTING_REQUIRED;
                 }else{
                 	sort_name = SORT_BY_NAME;
                 }
