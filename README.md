@@ -20,8 +20,8 @@ The shell supports several built-in commands, as well as external commands such 
 - **myuptime**: Shows how long the system has been running since the last reboot and displays the current time.
 - **myfree**: Provides information about memory usage on the system.
 - **myls**: This command allows the use of multiple options in any combination or order. Supported options include `a`, `l`, `d`, `t`, `i`, `u`, `c`, `1`, and `f`. You can mix and match these options freely to customize the output to your needs.
--**|**:The pipe operator allows you to connect the output of one command directly to the input of another. This enables you to create powerful command combinations, processing data in a streamlined manner. You can chain multiple commands together, using the pipe to pass the results from one to the next, enhancing the overall functionality and efficiency of your shell commands.
--**<, >, 2>**: Redirection operators allow you to control where input comes from and where output goes.
+- **|**:The pipe operator allows you to connect the output of one command directly to the input of another. This enables you to create powerful command combinations, processing data in a streamlined manner. You can chain multiple commands together, using the pipe to pass the results from one to the next, enhancing the overall functionality and efficiency of your shell commands.
+- **<, >, 2>**: Redirection operators allow you to control where input comes from and where output goes.
   
 ## Libraries and Headers Used
 The shell relies on the following libraries and headers:
